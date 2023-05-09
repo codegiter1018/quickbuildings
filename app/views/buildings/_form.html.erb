@@ -1,0 +1,43 @@
+<%= form_with model: @building, local: true do |f|%>
+  <div class="field">
+    <%= f.label :buildings_name, "ビルの名称" %><br />
+    <%= f.text_field :buildings_name, id:"building_buildings_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prefecture, "所属" %><br />
+    <%= f.text_area :prefecture, class: :form__text, id:"building_prefecture" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address, "住所" %><br />
+    <%= f.text_area :address, class: :form__text, id:"building_address" %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :completion, "竣工日(例:1999-01-01)" %><br />
+    <%= f.text_area :completion, class: :form__text, id:"building_completion" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :renewal, "最新のリニューアル日(例:1999-01-01)" %><br />
+    <%= f.text_area :renewal, class: :form__text, id:"building_renewal" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :description, "説明" %><br />
+    <%= f.text_area :description, class: :form__text, id:"building_description" %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= f.label :image, "プロトタイプの画像" %><br />
+    <%= f.file_field :image, id:"building_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

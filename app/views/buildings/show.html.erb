@@ -1,0 +1,84 @@
+<main class="main">
+  <div class="inner">
+    <div class="building__wrapper">
+      <p class="building__hedding">
+        <%= @building.buildings_name %>
+      </p>
+     
+   
+       <% if user_signed_in? && current_user.id == @building.user.id %>
+        <div class="building__manage">
+          <%= link_to "編集する", edit_building_path(@building), class: :building__btn %>
+          <%= link_to "削除する", building_path(@building), method: :delete, class: :building__btn %>
+        </div> 
+        <% end %>
+ 
+      <div class="building__image">
+        <%= image_tag @building.image  %>
+      </div>
+      <div class="building__body">
+       <div class="building__detail">
+          <p class="detail__title">住所</p>
+          <p class="detail__message">
+            <%= @building.address %>
+          </p>
+        </div>
+
+        <div class="building__detail">
+          <p class="detail__title">竣工日</p>
+          <p class="detail__message">
+            <%= @building.completion %>
+          </p>
+         </div>
+
+          <div class="building__detail">
+          <p class="detail__title">直近のリニューアル日</p>
+          <p class="detail__message">
+            <%= @building.renewal %>
+          </p>
+         </div>
+
+          <div class="building__detail">
+          <p class="detail__title">詳細</p>
+          <p class="detail__message">
+            <%= @building.description %>
+          </p>
+         </div>
+
+      </div>
+      <div class="building__comments">
+  
+        <% if user_signed_in? %>
+           <%= form_with model:[@building,@comment],local: true do |f|%>
+            <div class="field">
+               <%= f.label :content, "簡易報告" %><br />
+               <%= f.text_field :content, id:"comment_content" %>
+            </div>
+            <div class="actions">
+              <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+          <% end %>
+          <% end %>
+
+        <ul class="comments_lists">
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+               <%= comment.content%>
+              <%= link_to "(#{comment.user.name})", user_path(comment.user), class: :comment_user %>
+              <%= comment.created_at %>
+
+          <% if user_signed_in? && comment.user == current_user %>
+        <div class="building__manage">
+          <%= link_to "削除する", building_comment_path(comment.building.id,comment.id), method: :delete, class: :building__btn %>
+        </div> 
+        <% end %>
+
+            </li>
+            <% end %>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</main>

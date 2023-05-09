@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@user.name}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">社員番号と名前</th>
+            <td class="table__col2"><%= "#{@user.name}" %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">所属</th>
+            <td class="table__col2"><%= "#{@user.department}" %></td>
+          </tr>
+
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= "#{@user.name}さんの履歴"%>
+      </h2>
+      <div class="user__card">
+ 
+        <%= render partial: "buildings/building", collection: @user.buildings  %>
+
+      </div>
+    </div>
+  </div>
+</div>
