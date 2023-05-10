@@ -8,10 +8,11 @@ Quickbuildings
 竣工情報など古い資料から調べる時間の削減、簡易工事報告や履歴やなどのデジタル化で効率の向上を狙います
 
 # URL
-https://quickbuildings.onrender.com
+https://quickbuildings.onrender.com  
+  
 # テスト用アカウント
-０００テスト
-メールアドレス: megyameri@eay.jp
+ユーザー名:０００テスト  
+メールアドレス: megyameri@eay.jp  
 パスワード: testtest3
 
 # 利用方法
@@ -25,7 +26,7 @@ https://quickbuildings.onrender.com
 少しでも便利に仕事の効率化をしたいと考えた際に構想が浮かびました  
 緊急時に口頭で答える場合もあったので文字として残し共有し円滑な対応をサポートを目標とし作成しました  
 # 洗い出した要件
-
+https://docs.google.com/spreadsheets/d/1aIUQaprcGG7ScO9V3gniw3I5soULinVWAOjCl3_fQ5M/edit#gid=982722306
 
 # 実装した機能についての画像やGIFおよびその説明  　　
 
@@ -38,8 +39,14 @@ https://quickbuildings.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/aafb5692318446b1f6be07e036dcf5ba.gif)](https://gyazo.com/aafb5692318446b1f6be07e036dcf5ba)
 
 
+# 実装予定の機能
+
 
 # DB 設計
+  
+
+    
+
 
 ## users table
 
