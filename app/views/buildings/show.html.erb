@@ -65,7 +65,7 @@
             <li class="comments_list">
                <%= comment.content%>
               <%= link_to "(#{comment.user.name})", user_path(comment.user), class: :comment_user %>
-              <%= comment.created_at %>
+              <%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %>
 
           <% if user_signed_in? && comment.user == current_user %>
         <div class="building__manage">
