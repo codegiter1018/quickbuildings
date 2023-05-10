@@ -40,12 +40,10 @@ https://docs.google.com/spreadsheets/d/1aIUQaprcGG7ScO9V3gniw3I5soULinVWAOjCl3_f
 
 
 # 実装予定の機能
+一定の時間操作しなかったらログアウトさせる
+トップページの表示を都道府県ごとに表示を分ける
 
-
-# DB 設計
   
-
-    
 
 
 ## users table
