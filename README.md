@@ -11,9 +11,14 @@ Quickbuildings
 https://quickbuildings.onrender.com  
   
 # テスト用アカウント
+ベーシック認証  
+ID：admin  
+PASS：2222   
+
 ユーザー名:０００テスト  
 メールアドレス: megyameri@eay.jp  
 パスワード: testtest3
+
 
 # 利用方法
 ログインすることで自社で担当しているビルの情報を見ることができます
@@ -40,8 +45,8 @@ https://docs.google.com/spreadsheets/d/1aIUQaprcGG7ScO9V3gniw3I5soULinVWAOjCl3_f
 
 
 # 実装予定の機能
-一定の時間操作しなかったらログアウトさせる
-トップページの表示を都道府県ごとに表示を分ける
+・一定の時間操作しなかったらログアウトさせる  
+・トップページの表示を都道府県ごとに表示を分ける  
 
   
 
