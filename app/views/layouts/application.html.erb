@@ -15,30 +15,31 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to image_tag("logo2.png", class: :logo), root_path %>
+            <%= link_to image_tag("logo2.png", class: :logo), root_path %>            
+            <p><%= Date.current.strftime('%Y/%m/%d') %></p>
           </div>
+          
      <% if user_signed_in? %>
-             <div class="nav__right"> 
+             <div class="nav__right">        
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <% if current_user == @user || current_user.admin? %> 
              <%=  link_to "投稿", new_building_path, class: :nav__btn %>
+               
                <% end %> 
              </div> 
-             
-
-          <% else %>
-            <div class="nav__right">
+      <% else %>
+            <div class="nav__right">            
               <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
             </div>
-          <% end %>
-
+       <% end %>
         </div>
       </div>
     </header>
     <%= yield %>
     <footer class="footer">
       <p class="copyright">Copyright © QUICK BUILDINGS All rights reserved.</p>
+      
     </footer>
   </body>
 </html>

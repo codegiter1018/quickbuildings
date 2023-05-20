@@ -3,10 +3,8 @@
     <% if user_signed_in? %>
        <div class="greeting"> 
         <%= "#{current_user.name}さんでログイン中"%>
-       </div> 
-      
-
-       <% end %>
+       </div>       
+    <% end %>
     <div class="card__wrapper">
        <%= render partial: "building", collection: @building  %>
     </div>

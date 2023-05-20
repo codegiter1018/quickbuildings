@@ -8,6 +8,4 @@ class Building < ApplicationRecord
   validates :address, presence: true
   validates :completion, presence: true
   validates :image, presence: true
-
-
 end

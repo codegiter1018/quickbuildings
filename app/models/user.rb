@@ -5,10 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :database_authenticatable, :registerable, :timeoutable
 
-         
-         validates :name, presence: true
-         validates :department, presence: true
+  validates :name, presence: true
+  validates :department, presence: true
 
-         has_many :buildings
-         has_many :comments ,dependent: :destroy
-        end
+  has_many :buildings
+  has_many :comments, dependent: :destroy
+end

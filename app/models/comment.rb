@@ -1,7 +1,6 @@
 class Comment < ApplicationRecord
   belongs_to :user
-belongs_to :building
+  belongs_to :building
 
-validates :content, presence: true
-
+  validates :content, presence: true
 end
